@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png" />
+
+    <title>E-commerce product page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="menu">
+          <img class="logo" src="icon-menu.svg" alt="" />
+        </button>
+        <img src="logo.svg" alt="" />
+        <button id="btn-close">
+          <img class="close" src="icon-close.svg" alt="close" />
+        </button>
+        <ul>
+          <li>Collections</li>
+          <li>Man</li>
+          <li>Woman</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <div>
+        <img id="cart-img" src="icon-cart.svg" alt="" />
+        <section id="cart" class="container_cart">
+          <header><h3>Cart</h3></header>
+          <div id="content-cart" class="container_cart_deeper">
+            <p class="remove" id="to-remove">Your cart is empty.</p>
+            <template>
+              <div id="template-div">
+                <img src="image-product-1-thumbnail.jpg" alt="" />
+                <div>
+                  <h4>Fall Limited Edition Sneakers</h4>
+                  <p id="cart-text-content"></p>
+                  <img id="trashcan" src="icon-delete.svg" alt="" />
+                </div>
+                <button>Checkout</button>
+              </div>
+            </template>
+          </div>
+        </section>
+        <img src="image-avatar.png" alt="" />
+      </div>
+    </header>
+    <hr />
+    <main>
+      <section>
+        <div id="case-for-img" class="origin">
+          <div class="photo">
+            <button
+              value="right"
+              class="btn-switch left"
+              id="btn-of-switch-left">
+              <img src="icon-next.svg" alt="" />
+            </button>
+            <img id="switch" src="image-product-1.jpg" alt="" />
+            <button
+              value="left"
+              class="btn-switch right"
+              id="btn-of-switch-right">
+              <img src="icon-next.svg" alt="" />
+            </button>
+          </div>
+
+          <div id="container" class="photo_thumbnail">
+            <button id="only-one" class="dark" value="1">
+              <img
+                id="sub-only-one"
+                class="sub_dark"
+                src="image-product-1-thumbnail.jpg"
+                alt="" />
+            </button>
+            <button value="2">
+              <img src="image-product-2-thumbnail.jpg" alt="" />
+            </button>
+            <button value="3">
+              <img src="image-product-3-thumbnail.jpg" alt="" />
+            </button>
+            <button value="4">
+              <img src="image-product-4-thumbnail.jpg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="origin_sub">
+          <header>
+            <p>Sneaker Company</p>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+          </header>
+          <div class="buy">
+            <div class="price">
+              <div>
+                <p>$125.00</p>
+                <p>50%</p>
+              </div>
+              <p>$250.00</p>
+            </div>
+            <div class="add">
+              <div>
+                <button id="btn-minus">
+                  <img src="icon-minus.svg" alt="" />
+                </button>
+                <p id="amount">1</p>
+                <button id="btn-plus">
+                  <img src="icon-plus.svg" alt="" />
+                </button>
+              </div>
+              <button id="add-cart">
+                <span><img src="icon-cart.svg" alt="" /></span>Add to
+                cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="scirpt.js"></script>
+  </body>
+</html>

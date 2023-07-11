@@ -1,0 +1,469 @@
+::after,
+::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  color-scheme: light dark;
+}
+body {
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% auto 1fr;
+  font-family: "Kumbh Sans", sans-serif;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  border: none;
+  display: block;
+}
+/* header */
+body > header {
+  color: black;
+  align-items: center;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: auto auto;
+}
+nav {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  column-gap: 1vw;
+}
+
+nav > button:hover {
+  background-color: #fff;
+}
+nav > button {
+  background-color: transparent;
+  width: 3em;
+  transition: background-color 300ms;
+  border-radius: 50%;
+  padding: 1em;
+  display: none;
+  cursor: pointer;
+}
+nav > button > img {
+  width: 2em;
+  aspect-ratio: 1/1;
+}
+nav > button {
+  display: none;
+}
+
+ul {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+li {
+  font-size: 1.1em;
+  transition: opacity, border-bottom, 300ms;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+li:hover {
+  opacity: 1;
+  border-bottom: 0.3em solid hsl(26, 100%, 55%);
+}
+body > header > div {
+  display: grid;
+  column-gap: 2em;
+  grid-template-columns: repeat(2, 1fr);
+}
+body > header > div > img {
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  width: 2em;
+}
+
+hr {
+  border-radius: 5px;
+  width: 70%;
+  margin-inline: auto;
+}
+/* main / section*/
+main {
+  display: grid;
+  place-content: center;
+}
+main > section {
+  width: clamp(200px, 90vw, 1000px);
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+/* section for images */
+main > section > div:nth-child(1) {
+  color: black;
+  display: grid;
+  row-gap: 5%;
+}
+.photo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 600px;
+}
+.photo > img {
+  border-radius: 1em;
+}
+.photo_thumbnail {
+  display: grid;
+  column-gap: 5%;
+  grid-template-columns: repeat(4, 1fr);
+}
+.photo_thumbnail > button {
+  background-color: transparent;
+  transition: background-color, outline, 200ms;
+  border-radius: 1em;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+.photo_thumbnail > button > img {
+  transition: opacity 200ms;
+  cursor: pointer;
+  border-radius: 1em;
+}
+.photo_thumbnail > button:hover {
+  background-color: hsl(25, 100%, 94%);
+  outline: 0.2em solid hsl(26, 100%, 55%);
+}
+.photo_thumbnail > button > img:hover {
+  opacity: 0.4;
+}
+
+/* second div in the section(.buy) */
+.origin_sub {
+  padding: 2em;
+  display: grid;
+}
+.origin_sub > header {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.origin_sub > header > p {
+  font-size: clamp(1em, 1.8vw, 1.4em);
+  width: clamp(10em, 100%, 100vw);
+}
+.origin_sub > header > p:nth-child(1) {
+  color: hsl(26, 100%, 55%);
+}
+h2 {
+  font-size: clamp(1.4em, 3.5vw, 3.2em);
+}
+.origin_sub > header > p:nth-child(3) {
+  text-align: justify;
+}
+
+/* buy */
+.buy {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+/* first section of buy */
+.price {
+  display: grid;
+}
+.price > div {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.price > div > p:nth-child(1) {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.price > div > p:nth-child(2) {
+  width: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  font-weight: bold;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 8px;
+  color: hsl(26, 100%, 55%);
+}
+.price > p {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+/* second section of buy */
+.add {
+  column-gap: 0.8em;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+.add > div {
+  height: 96%;
+  max-width: 12em;
+  padding: 1em 0;
+  border-radius: 8px;
+  background-color: hsl(223, 64%, 98%);
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 30%);
+}
+.add > div > button {
+  cursor: pointer;
+}
+.add > div > p {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.add > div > button,
+.add > div > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.add > button {
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  border-radius: 8px;
+  padding: 1em 0;
+  justify-content: center;
+  column-gap: 5%;
+  font-size: clamp(1em, 10%,1.4em);
+  transition: opacity 200ms;
+  box-shadow: 0 1em 1.9em hsla(26, 100%, 55%, 0.63);
+  background-color: hsl(26, 100%, 55%);
+}
+.add > button:hover {
+  opacity: 0.7;
+}
+.dark {
+  background-color: hsl(25, 100%, 94%);
+  outline: 0.2em solid hsl(26, 100%, 55%);
+}
+
+.sub_dark {
+  opacity: 0.4;
+}
+
+/* cart */
+.container_cart {
+  z-index: 10;
+  color: black;
+  background-color: hsl(0, 0%, 100%);
+  display: none;
+  grid-template-columns: 1fr;
+  width: 400px;
+  border-radius: 8px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  box-shadow: 0 0 2em 1px rgba(0, 0, 0, 0.747);
+}
+.container_cart > header {
+  padding: 1em;
+  border-bottom: 2px solid gray;
+}
+.container_cart > div {
+  min-height: 10em;
+}
+
+.container_cart_deeper > div {
+  display: grid;
+  padding: 1em;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 2em;
+}
+.container_cart_deeper > div > img {
+  border-radius: 8px;
+  max-width: 4em;
+  margin-inline: auto;
+  aspect-ratio: 1/1;
+}
+.container_cart_deeper > div > button {
+  grid-column: 1/3;
+  border-radius: 8px;
+  padding: 0.8em 0;
+  font-size: 1.4em;
+  width: 90%;
+  margin-inline: auto;
+  background-color: hsl(26, 100%, 55%);
+}
+.container_cart_deeper > div > div {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.container_cart_deeper > div > div > img {
+  grid-area: 1/2/3/3;
+}
+
+.remove {
+  font-weight: bold;
+  opacity: 0.6;
+  grid-column: 1/3;
+  font-size: 1.4em;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+/* picture */
+.btn-switch {
+  background-color: white;
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  top: 50%;
+}
+.left {
+  transform: rotate(180deg);
+  left: 20px;
+}
+.right {
+  right: 20px;
+}
+@media (width < 550px) {
+  main  {
+    place-content: start;
+  }
+  hr {
+    display: none;
+  }
+  body {
+    grid-template-rows: repeat(2, auto);
+  }
+
+  body > header {
+    padding: 0.1em;
+    justify-content: stretch;
+  }
+  nav {
+    column-gap: 0;
+  }
+  nav > button:nth-child(1) {
+    display: block;
+  }
+  ul {
+    display: none;
+  }
+  main > section {
+    width: 100vw;
+    grid-template-columns: 1fr;
+  }
+  .origin > div {
+    max-width: 100vw;
+  }
+  .origin > div:nth-child(2) {
+    display: none;
+  }
+  .photo > img {
+    object-fit: cover;
+    border-radius: 0;
+  }
+  .price {
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+  }
+  .origin_sub {
+    padding: 0.8em;
+  }
+
+  .add {
+    flex-direction: column;
+  }
+
+  .container_cart {
+    margin: auto;
+    right: 0;
+    left: 0;
+    width: 95vw;
+  }
+
+  .btn-switch {
+    display: block;
+  }
+}
+.menu_list {
+  padding: 3em 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+  z-index: 100;
+  background-color: #fff;
+  display: grid;
+  row-gap: 1em;
+  height: 100vh;
+  width: 60vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 2em);
+}
+.menu_list > li {
+  font-weight: bold;
+  font-size: 1.4em;
+  justify-content: left;
+}
+button[id="btn-close"] {
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  padding: 1em;
+  left: 0;
+}
+/* photo 2.0 */
+.center {
+  z-index: 9999;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  gap: 1em;
+  place-content: center;
+  backdrop-filter: brightness(50%);
+}
+.center > div {
+  width: clamp(400px, 600px, 80vw);
+}
+.block {
+  display: block;
+}
+.block[value="right"] {
+  left: -20px;
+}
+.block[value="left"] {
+  right: -20px;
+}
+.btn-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+.btn-close > img {
+  width: 3em;
+}
